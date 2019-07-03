@@ -270,7 +270,6 @@ class Model
      */
     protected function _facade($data)
     {
-
         // 检查数据字段合法性
         if (!empty($this->fields)) {
             if (!empty($this->options['field'])) {
