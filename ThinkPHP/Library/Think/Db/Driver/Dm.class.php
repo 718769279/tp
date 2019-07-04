@@ -11,20 +11,7 @@ use Think\Db\Driver;
 
 class Dm extends Driver
 {
-    /**
-     * 解析pdo连接的dsn信息
-     * @access public
-     * @param array $config 连接信息
-     * @return string
-     */
-    /*protected function parseDsn($config)
-    {
-        $dsn = 'jdbc:dm://' . $config['DB_HOST'] . ($config['DB_PORT'] ? ':' . $config['DB_PORT'] : '') . '/' . $config['DB_NAME'];
-        if (!empty($config['DB_CHARSET'])) {
-            $dsn .= ';charset=' . $config['DB_CHARSET'];
-        }
-        return $dsn;
-    }*/
+    private $table       = '';
 
     /**
      * 连接数据库方法
@@ -74,6 +61,7 @@ class Dm extends Driver
             {
                 throw new \Exception("Query failed : " . dm_error());
             }
+
             $result = array();
             while ($line = dm_fetch_array($resultId, DM_ASSOC)) {
                 $result[] = $line;
@@ -107,43 +95,20 @@ class Dm extends Driver
         if ($fetchSql) {
             return $this->queryStr;
         }
-        print_r($this->table);exit;
-        $flag = false;
-        if (preg_match("/^\s*(INSERT\s+INTO)\s+(\w+)\s+/i", $str, $match)) {
-            $this->table = C("DB_SEQUENCE_PREFIX") . str_ireplace(C("DB_PREFIX"), "", $match[2]);
-            $flag        = (boolean) $this->query("SELECT * FROM user_sequences WHERE sequence_name='" . strtoupper($this->table) . "'");
-        }
-        //释放前次的查询结果
-        if (!empty($this->PDOStatement)) {
-            $this->free();
-        }
+
+        //释放前次的查询结果 TODO
 
         $this->executeTimes++;
         N('db_write', 1); // 兼容代码
-        // 记录开始执行时间
-        $this->debug(true);
-        $this->PDOStatement = $this->_linkID->prepare($str);
-        if (false === $this->PDOStatement) {
-            $this->error();
-            return false;
-        }
-        foreach ($this->bind as $key => $val) {
-            if (is_array($val)) {
-                $this->PDOStatement->bindValue($key, $val[0], $val[1]);
-            } else {
-                $this->PDOStatement->bindValue($key, $val);
-            }
-        }
-        $this->bind = array();
-        $result     = $this->PDOStatement->execute();
-        $this->debug(false);
+        $result     = $this->query($this->queryStr, $fetchSql);
+
         if (false === $result) {
             $this->error();
             return false;
         } else {
-            $this->numRows = $this->PDOStatement->rowCount();
-            if ($flag || preg_match("/^\s*(INSERT\s+INTO|REPLACE\s+INTO)\s+/i", $str)) {
-                $this->lastInsID = $this->_linkID->lastInsertId();
+            $this->numRows = dm_affected_rows();
+            if (is_array($result) || preg_match("/^\s*(INSERT\s+INTO|REPLACE\s+INTO)\s+/i", $str)) {
+                $this->lastInsID = dm_insert_id();
             }
             return $this->numRows;
         }
@@ -156,6 +121,7 @@ class Dm extends Driver
     public function getFields($tableName)
     {
         list($database,$tableName) = explode('.', $tableName);
+        $this->table = $tableName;
 
         $result          = $this->query("select a.column_name,data_type,decode(nullable,'Y',0,1) notnull,data_default,decode(a.column_name,b.column_name,1,0) pk "
             . "from user_tab_columns a,(select column_name from user_constraints c,user_cons_columns col "
@@ -177,42 +143,8 @@ class Dm extends Driver
         return $info;
     }
 
-//    /**
-//     * 插入记录
-//     * @access public
-//     * @param mixed $data 数据
-//     * @param array $options 参数表达式
-//     * @param boolean $replace 是否replace
-//     * @return false | integer
-//     */
-//    public function insert($data, $options = array(), $replace = false)
-//    {
-//        $values      = $fields      = array();
-//        $this->model = $options['model'];
-//        $this->parseBind(!empty($options['bind']) ? $options['bind'] : array());
-//        foreach ($data as $key => $val) {
-//            if (isset($val[0]) && 'exp' == $val[0]) {
-//                $fields[] = $this->parseKey($key);
-//                $values[] = $val[1];
-//            } elseif (is_null($val)) {
-//                $fields[] = $this->parseKey($key);
-//                $values[] = 'NULL';
-//            } elseif (is_scalar($val)) {
-//                // 过滤非标量数据
-//                $fields[] = $this->parseKey($key);
-//                if (0 === strpos($val, ':') && in_array($val, array_keys($this->bind))) {
-//                    $values[] = $val;
-//                } else {
-//                    $name     = count($this->bind);
-//                    $values[] = ':' . $key . '_' . $name;
-//                    $this->bindParam($key . '_' . $name, $val);
-//                }
-//            }
-//        }
-//        // 兼容数字传入方式
-//        $replace = (is_numeric($replace) && $replace > 0) ? true : $replace;
-//        $sql     = (true === $replace ? 'REPLACE' : 'INSERT') . ' INTO ' . $this->parseTable($options['table']) . ' (' . implode(',', $fields) . ') VALUES (' . implode(',', $values) . ')' . $this->parseDuplicate($replace);
-//        $sql .= $this->parseComment(!empty($options['comment']) ? $options['comment'] : '');
-//        return $this->execute($sql, !empty($options['fetch_sql']) ? true : false);
-//    }
+    public function getLastInsID()
+    {
+        return dm_insert_id();
+    }
 }

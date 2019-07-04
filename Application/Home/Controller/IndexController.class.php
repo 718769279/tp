@@ -20,28 +20,34 @@ class IndexController extends Controller
 //            ->select();
 //        $info = M("teacher")->select();
 
+//        $data = array(
+//            "name"=>"封神榜",
+//            "author"=>"许仲琳",
+//            "publisher"=>"中华书局",
+//            "publishtime"=>"1600-04-01",
+//            "product_subcategoryid"=>"4",
+//            "productno"=>"97875391259945",
+//            "satetystocklevel"=>"10",
+//            "originalprice"=>"66",
+//            "nowprice"=>"65",
+//            "discount"=>"8.8",
+//            "description"=>"详细的描述",
+//            "photo"=>"",
+//            "type"=>"16",
+//            "papertotal"=>"988",
+//            "wordtotal"=>"2342340",
+//            "sellstarttime"=>"2019-07-03",
+//            "sellendtime"=>""
+//        );
+//
+//        $info = M('PRODUCTION.product', '', C('DB_DM'))->add($data);
+
+//        $info = M('PRODUCTION.product', '', C('DB_DM'))->where(array("PRODUCTID"=>18))->delete();
+
         $data = array(
-            "name"=>"封神榜",
-            "author"=>"许仲琳",
-            "publisher"=>"中华书局",
-            "publishtime"=>"1600-04-01",
-            "product_subcategoryid"=>"4",
-            "productno"=>"9787539125996",
-            "satetystocklevel"=>"10",
-            "originalprice"=>"66",
-            "nowprice"=>"65",
-            "discount"=>"8.8",
-            "description"=>"详细的描述",
-            "photo"=>"",
-            "type"=>"16",
-            "papertotal"=>"988",
-            "wordtotal"=>"2342340",
-            "sellstarttime"=>"2019-07-03",
-            "sellendtime"=>""
+            "name"=>"封神榜1"
         );
-
-        $info = M('PRODUCTION.product', '', C('DB_DM'))->add($data);
-
+        $info = M('PRODUCTION.product', '', C('DB_DM'))->where(array("PRODUCTID"=>20))->save($data);
         var_dump($info);
     }
 }
