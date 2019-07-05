@@ -25,7 +25,8 @@ class Dm extends Driver
             }
 
             try {
-                $this->linkID[$linkNum] = dm_connect($config['hostname'], $config['username'], $config['password']);
+                $link = $config['hostname'].($config['hostport'] ? ':' . $config['hostport'] : '').($config['database'] ? '/' . $config['database'] : '');
+                $this->linkID[$linkNum] = dm_connect($link, $config['username'], $config['password']);
             } catch (\Exception $e) {
                 E($e->getmessage());
             }
@@ -66,6 +67,8 @@ class Dm extends Driver
             while ($line = dm_fetch_array($resultId, DM_ASSOC)) {
                 $result[] = $line;
             }
+            //释放前次的查询结果
+            dm_free_result($resultId);
             return $result;
         } catch (\Exception $e) {
             echo $e->getMessage();
@@ -95,8 +98,6 @@ class Dm extends Driver
         if ($fetchSql) {
             return $this->queryStr;
         }
-
-        //释放前次的查询结果 TODO
 
         $this->executeTimes++;
         N('db_write', 1); // 兼容代码
