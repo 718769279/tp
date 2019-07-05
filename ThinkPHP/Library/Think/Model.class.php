@@ -1607,6 +1607,12 @@ class Model
                 // 支持读取配置参数
                 $config = C($config);
             }
+
+            //增加兼容dm连接
+            if($config['db_type'] === 'dm'){
+                $this->dbName = $config['db_name'];
+            }
+
             $this->_db[$linkNum] = Db::getInstance($config);
         } elseif (null === $config) {
             $this->_db[$linkNum]->close(); // 关闭数据库连接
