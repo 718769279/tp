@@ -2,8 +2,6 @@
 namespace Home\Controller;
 
 use Think\Controller;
-use Home\Model\Base;
-use Home\Model\Product;
 
 class IndexController extends Controller
 {
