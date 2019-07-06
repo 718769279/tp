@@ -1607,11 +1607,6 @@ class Model
                 $config = C($config);
             }
 
-            //增加兼容dm连接
-            if($config['db_type'] === 'dm'){
-                $this->dbName = $config['db_name'];
-            }
-
             $this->_db[$linkNum] = Db::getInstance($config);
         } elseif (null === $config) {
             $this->_db[$linkNum]->close(); // 关闭数据库连接
@@ -1667,6 +1662,11 @@ class Model
                 $tableName .= parse_name($this->name);
             }
             $this->trueTableName = strtolower($tableName);
+        }
+
+        if(C('DB_TYPE') == 'dm')
+        {
+            $this->dbName = C('DB_NAME');
         }
         return (!empty($this->dbName) ? $this->dbName . '.' : '') . $this->trueTableName;
     }
