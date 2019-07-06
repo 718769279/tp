@@ -96,41 +96,22 @@ class IndexController extends Controller
 //        $info = Product::getList(0, 5, "*", "nowprice", true);
 
         //查询原始语句
-        $info = Product::getBySql("SELECT * FROM production.product");
-        print_r($info);exit;
+//        $info = Product::getBySql("SELECT * FROM production.product");
+
+        //通过条件查询一列数据
+//        $info = Product::getFieldByCondition(array("product_subcategoryid"=>4),"name",true);
+//        print_r($info);exit;
 
         //M方法调用
-//        $info = M("product","","DM_CONFIG")
-//            ->where(array("satetystocklevel"=>10))
+        $info = M("product")
+//            ->field("name,author,publisher,publishtime,nowprice")
 //            ->where(array("product_subcategoryid"=>4))
-//            ->limit(1)
-//            ->select();
-//        $data = array(
-//            "name"=>"封神榜123",
-//            "author"=>"许仲琳",
-//            "publisher"=>"中华书局",
-//            "publishtime"=>"1600-04-01",
-//            "product_subcategoryid"=>"4",
-//            "productno"=>"97875391259950",
-//            "satetystocklevel"=>"10",
-//            "originalprice"=>"66",
-//            "nowprice"=>"65",
-//            "discount"=>"8.8",
-//            "description"=>"详细的描述",
-//            "photo"=>"",
-//            "type"=>"16",
-//            "papertotal"=>"988",
-//            "wordtotal"=>"2342340",
-//            "sellstarttime"=>"2019-07-03",
-//            "sellendtime"=>""
-//        );
-//
-//        $info = M("product","","DM_CONFIG")->add($data);
-
-        /*$data = array(
-            "name"=>"封神榜12"
-        );
-        $info = M('product', '', "DM_CONFIG")->where(array("productid"=>20))->save($data);*/
-        var_dump($info);exit;
+//            ->limit(0,3)
+//            ->sum("nowprice");
+//            ->max("nowprice");
+//            ->min("nowprice");
+//            ->avg("nowprice");
+            ->select();
+        print_r($info);exit;
     }
 }
