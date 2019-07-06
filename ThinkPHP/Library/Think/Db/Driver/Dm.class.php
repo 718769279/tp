@@ -143,9 +143,4 @@ class Dm extends Driver
         }
         return $info;
     }
-
-    public function getLastInsID()
-    {
-        return dm_insert_id();
-    }
 }

@@ -10,7 +10,7 @@ class IndexController extends Controller
     public function dm()
     {
         //查询所有数据
-        $info = Product::getAll("*","", true);
+//        $info = Product::getAll("*","", true);
 
         //查询指定字段和指定排序的所有结果
 //        $info = Product::getAll("name,author,publisher,publishtime,nowprice","nowprice desc", true);
@@ -20,12 +20,12 @@ class IndexController extends Controller
 
         //新增
 //        $data = array(
-//            "name"=>"封神榜123123",
+//            "name"=>"封神榜444",
 //            "author"=>"许仲琳",
 //            "publisher"=>"中华书局",
 //            "publishtime"=>"1600-04-01",
 //            "product_subcategoryid"=>"4",
-//            "productno"=>"97875391259952",
+//            "productno"=>"978753912599544",
 //            "satetystocklevel"=>"10",
 //            "originalprice"=>"66",
 //            "nowprice"=>"65",
@@ -39,6 +39,7 @@ class IndexController extends Controller
 //            "sellendtime"=>""
 //        );
 //        $info = Product::addOne($data);
+//        print_r($info);exit;
 
         //批量添加
 //        $data = array(
@@ -103,7 +104,7 @@ class IndexController extends Controller
 //        print_r($info);exit;
 
         //M方法调用
-        $info = M("product")
+//        $info = M("product")
 //            ->field("name,author,publisher,publishtime,nowprice")
 //            ->where(array("product_subcategoryid"=>4))
 //            ->limit(0,3)
@@ -111,6 +112,16 @@ class IndexController extends Controller
 //            ->max("nowprice");
 //            ->min("nowprice");
 //            ->avg("nowprice");
+//            ->field("product_subcategoryid,sum(nowprice)")
+//            ->group("product_subcategoryid") //group 需要配合field函数使用，field中必须包含group字段
+//            ->where(array("name"))
+//            ->select();
+
+        //连表查询
+        $info = M("product")
+            ->field("p.name,p.author,p.publisher,p.nowprice,s.name sname")
+            ->table("production.product p")
+            ->join("production.product_subcategory s on p.product_subcategoryid=s.product_subcategoryid", "left")
             ->select();
         print_r($info);exit;
     }
