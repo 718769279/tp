@@ -15,7 +15,7 @@ class IndexController extends Controller
 //        $info = Product::getAll("name,author,publisher,publishtime,nowprice","nowprice desc", true);
 
         //根据id查询
-//        $info = Product::getOneByLockId("25","name,author,publisher,publishtime,nowprice");
+        $info = Product::getOneByLockId("25","name,author,publisher,publishtime,nowprice");
 
         //新增
 //        $data = array(

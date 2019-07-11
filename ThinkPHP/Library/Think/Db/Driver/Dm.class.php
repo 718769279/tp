@@ -60,7 +60,7 @@ class Dm extends Driver
 
             if(!$resultId)
             {
-                throw new \Exception("Query failed : " . dm_error($this->_linkID));
+                throw new \Exception("Query failed : " . dm_error($this->_linkID) . "; SQL语句：". $this->queryStr);
             }
 
             $result = array();
@@ -71,7 +71,8 @@ class Dm extends Driver
             dm_free_result($resultId);
             return $result;
         } catch (\Exception $e) {
-            echo $e->getMessage();
+            // 记录错误日志
+            trace($e->getMessage(), '', 'ERR');
             return false;
         }
     }
