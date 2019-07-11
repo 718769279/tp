@@ -1664,10 +1664,6 @@ class Model
             $this->trueTableName = strtolower($tableName);
         }
 
-        if(C('DB_TYPE') == 'dm')
-        {
-            $this->dbName = C('DB_NAME');
-        }
         return (!empty($this->dbName) ? $this->dbName . '.' : '') . $this->trueTableName;
     }
 

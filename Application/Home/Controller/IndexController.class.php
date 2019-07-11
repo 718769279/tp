@@ -2,18 +2,19 @@
 namespace Home\Controller;
 
 use Think\Controller;
+use Home\Model\Product;
 
 class IndexController extends Controller
 {
     public function dm()
     {
         //查询所有数据
-//        $info = Product::getAll("*","", true);
+        $info = Product::getAll("*","", true);
 
         //查询指定字段和指定排序的所有结果
 //        $info = Product::getAll("name,author,publisher,publishtime,nowprice","nowprice desc", true);
 
-        //更具id查询
+        //根据id查询
 //        $info = Product::getOneByLockId("25","name,author,publisher,publishtime,nowprice");
 
         //新增
@@ -116,11 +117,11 @@ class IndexController extends Controller
 //            ->select();
 
         //连表查询
-        $info = M("product")
-            ->field("p.name,p.author,p.publisher,p.nowprice,s.name sname")
-            ->table("production.product p")
-            ->join("production.product_subcategory s on p.product_subcategoryid=s.product_subcategoryid", "left")
-            ->select();
+//        $info = M("product")
+//            ->field("p.name,p.author,p.publisher,p.nowprice,s.name sname")
+//            ->table("production.product p")
+//            ->join("production.product_subcategory s on p.product_subcategoryid=s.product_subcategoryid", "left")
+//            ->select();
         print_r($info);exit;
     }
 }

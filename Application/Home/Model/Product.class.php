@@ -10,7 +10,7 @@ use Home\Model\Base;
 
 class Product extends Base
 {
-    const TAB_NAME = 'product';
+    const TAB_NAME = 'production.product';
 
     /**
      * 返回表名

@@ -56,15 +56,15 @@ class Dm extends Driver
         }
 
         try {
-            $resultId = dm_query($str);
+            $resultId = dm_query($str, $this->_linkID);
 
             if(!$resultId)
             {
-                throw new \Exception("Query failed : " . dm_error());
+                throw new \Exception("Query failed : " . dm_error($this->_linkID));
             }
 
             $result = array();
-            while ($line = dm_fetch_array($resultId, DM_ASSOC)) {
+            while ($line = dm_fetch_assoc($resultId)) {
                 $result[] = $line;
             }
             //释放前次的查询结果
@@ -107,9 +107,9 @@ class Dm extends Driver
             $this->error();
             return false;
         } else {
-            $this->numRows = dm_affected_rows();
+            $this->numRows = dm_affected_rows($this->_linkID);
             if (is_array($result) || preg_match("/^\s*(INSERT\s+INTO|REPLACE\s+INTO)\s+/i", $str)) {
-                $this->lastInsID = dm_insert_id();
+                $this->lastInsID = dm_insert_id($this->_linkID);
             }
             return $this->numRows;
         }
