@@ -1,0 +1,339 @@
+[ 2019-07-17T12:39:10+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD G:\www\tp\ThinkPHP\Library\Think\App.class.php 第 32 行.
+NOTIC: [8] Undefined index: REQUEST_URI G:\www\tp\ThinkPHP\Library\Think\Dispatcher.class.php 第 141 行.
+NOTIC: [2] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' (this will throw an Error in a future version of PHP) G:\www\tp\ThinkPHP\Library\Think\Dispatcher.class.php 第 208 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+NOTIC: [2] Use of undefined constant __ROOT__ - assumed '__ROOT__' (this will throw an Error in a future version of PHP) G:\www\tp\ThinkPHP\Library\Behavior\ContentReplaceBehavior.class.php 第 35 行.
+NOTIC: [2] Use of undefined constant __ROOT__ - assumed '__ROOT__' (this will throw an Error in a future version of PHP) G:\www\tp\ThinkPHP\Library\Behavior\ContentReplaceBehavior.class.php 第 42 行.
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-17T13:01:42+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2019-07-17T14:40:55+08:00 ] 127.0.0.1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-17T14:41:16+08:00 ] 127.0.0.1 /index.php/home/index/dns
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-17T14:41:25+08:00 ] 127.0.0.1 /index.php/home/index/dns
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+
+[ 2019-07-17T15:05:04+08:00 ] 127.0.0.1 /index.php/home/index/dns
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: accessKeyId G:\www\tp\Application\Lib\DnsAliyun.class.php 第 23 行.
+NOTIC: [8] Undefined index: accessKeySecret G:\www\tp\Application\Lib\DnsAliyun.class.php 第 24 行.
+ERR: Class 'AlibabaCloud\Client\AlibabaCloud' not found
+
+[ 2019-07-17T15:06:04+08:00 ] 127.0.0.1 /index.php/home/index/dns
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: accessKeyId G:\www\tp\Application\Lib\DnsAliyun.class.php 第 23 行.
+NOTIC: [8] Undefined index: accessKeySecret G:\www\tp\Application\Lib\DnsAliyun.class.php 第 24 行.
+ERR: Class 'Lib\AlibabaCloud' not found
+
+[ 2019-07-17T15:06:18+08:00 ] 127.0.0.1 /index.php/home/index/dns
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: accessKeyId G:\www\tp\Application\Lib\DnsAliyun.class.php 第 23 行.
+NOTIC: [8] Undefined index: accessKeySecret G:\www\tp\Application\Lib\DnsAliyun.class.php 第 24 行.
+ERR: Class 'AlibabaCloud\Client\AlibabaCloud' not found
+
+[ 2019-07-17T15:06:19+08:00 ] 127.0.0.1 /index.php/home/index/dns
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: accessKeyId G:\www\tp\Application\Lib\DnsAliyun.class.php 第 23 行.
+NOTIC: [8] Undefined index: accessKeySecret G:\www\tp\Application\Lib\DnsAliyun.class.php 第 24 行.
+ERR: Class 'AlibabaCloud\Client\AlibabaCloud' not found
+
+[ 2019-07-17T15:06:19+08:00 ] 127.0.0.1 /index.php/home/index/dns
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: accessKeyId G:\www\tp\Application\Lib\DnsAliyun.class.php 第 23 行.
+NOTIC: [8] Undefined index: accessKeySecret G:\www\tp\Application\Lib\DnsAliyun.class.php 第 24 行.
+ERR: Class 'AlibabaCloud\Client\AlibabaCloud' not found
+
+[ 2019-07-17T15:06:19+08:00 ] 127.0.0.1 /index.php/home/index/dns
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: accessKeyId G:\www\tp\Application\Lib\DnsAliyun.class.php 第 23 行.
+NOTIC: [8] Undefined index: accessKeySecret G:\www\tp\Application\Lib\DnsAliyun.class.php 第 24 行.
+ERR: Class 'AlibabaCloud\Client\AlibabaCloud' not found
+
+[ 2019-07-17T15:09:58+08:00 ] 127.0.0.1 /index.php/home/index/dns
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: accessKeyId G:\www\tp\Application\Lib\DnsAliyun.class.php 第 23 行.
+NOTIC: [8] Undefined index: accessKeySecret G:\www\tp\Application\Lib\DnsAliyun.class.php 第 24 行.
+ERR: Class 'AlibabaCloud\Client\AlibabaCloud' not found
+
+[ 2019-07-17T15:09:58+08:00 ] 127.0.0.1 /index.php/home/index/dns
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: accessKeyId G:\www\tp\Application\Lib\DnsAliyun.class.php 第 23 行.
+NOTIC: [8] Undefined index: accessKeySecret G:\www\tp\Application\Lib\DnsAliyun.class.php 第 24 行.
+ERR: Class 'AlibabaCloud\Client\AlibabaCloud' not found
+
+[ 2019-07-17T15:09:59+08:00 ] 127.0.0.1 /index.php/home/index/dns
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8] Undefined index: accessKeyId G:\www\tp\Application\Lib\DnsAliyun.class.php 第 23 行.
+NOTIC: [8] Undefined index: accessKeySecret G:\www\tp\Application\Lib\DnsAliyun.class.php 第 24 行.
+ERR: Class 'AlibabaCloud\Client\AlibabaCloud' not found
+
+[ 2019-07-17T15:10:00+08:00 ] 127.0.0.1 /index.php/home/index/dns
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: accessKeyId G:\www\tp\Application\Lib\DnsAliyun.class.php 第 23 行.
+NOTIC: [8] Undefined index: accessKeySecret G:\www\tp\Application\Lib\DnsAliyun.class.php 第 24 行.
+ERR: Class 'AlibabaCloud\Client\AlibabaCloud' not found
+
+[ 2019-07-17T15:10:00+08:00 ] 127.0.0.1 /index.php/home/index/dns
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: accessKeyId G:\www\tp\Application\Lib\DnsAliyun.class.php 第 23 行.
+NOTIC: [8] Undefined index: accessKeySecret G:\www\tp\Application\Lib\DnsAliyun.class.php 第 24 行.
+ERR: Class 'AlibabaCloud\Client\AlibabaCloud' not found
+
+[ 2019-07-17T15:10:00+08:00 ] 127.0.0.1 /index.php/home/index/dns
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: accessKeyId G:\www\tp\Application\Lib\DnsAliyun.class.php 第 23 行.
+NOTIC: [8] Undefined index: accessKeySecret G:\www\tp\Application\Lib\DnsAliyun.class.php 第 24 行.
+ERR: Class 'AlibabaCloud\Client\AlibabaCloud' not found
+
+[ 2019-07-17T15:10:00+08:00 ] 127.0.0.1 /index.php/home/index/dns
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: accessKeyId G:\www\tp\Application\Lib\DnsAliyun.class.php 第 23 行.
+NOTIC: [8] Undefined index: accessKeySecret G:\www\tp\Application\Lib\DnsAliyun.class.php 第 24 行.
+ERR: Class 'AlibabaCloud\Client\AlibabaCloud' not found
+
+[ 2019-07-17T15:10:00+08:00 ] 127.0.0.1 /index.php/home/index/dns
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: accessKeyId G:\www\tp\Application\Lib\DnsAliyun.class.php 第 23 行.
+NOTIC: [8] Undefined index: accessKeySecret G:\www\tp\Application\Lib\DnsAliyun.class.php 第 24 行.
+ERR: Class 'AlibabaCloud\Client\AlibabaCloud' not found
+
+[ 2019-07-17T15:10:01+08:00 ] 127.0.0.1 /index.php/home/index/dns
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: accessKeyId G:\www\tp\Application\Lib\DnsAliyun.class.php 第 23 行.
+NOTIC: [8] Undefined index: accessKeySecret G:\www\tp\Application\Lib\DnsAliyun.class.php 第 24 行.
+ERR: Class 'AlibabaCloud\Client\AlibabaCloud' not found
+
+[ 2019-07-17T15:10:01+08:00 ] 127.0.0.1 /index.php/home/index/dns
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: accessKeyId G:\www\tp\Application\Lib\DnsAliyun.class.php 第 23 行.
+NOTIC: [8] Undefined index: accessKeySecret G:\www\tp\Application\Lib\DnsAliyun.class.php 第 24 行.
+ERR: Class 'AlibabaCloud\Client\AlibabaCloud' not found
+
+[ 2019-07-17T15:11:29+08:00 ] 127.0.0.1 /index.php/home/index/dns
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: accessKeyId G:\www\tp\Application\Lib\DnsAliyun.class.php 第 23 行.
+NOTIC: [8] Undefined index: accessKeySecret G:\www\tp\Application\Lib\DnsAliyun.class.php 第 24 行.
+ERR: Class 'AlibabaCloud\Client\AlibabaCloud' not found
+
+[ 2019-07-17T15:11:30+08:00 ] 127.0.0.1 /index.php/home/index/dns
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: accessKeyId G:\www\tp\Application\Lib\DnsAliyun.class.php 第 23 行.
+NOTIC: [8] Undefined index: accessKeySecret G:\www\tp\Application\Lib\DnsAliyun.class.php 第 24 行.
+ERR: Class 'AlibabaCloud\Client\AlibabaCloud' not found
+
+[ 2019-07-17T15:11:30+08:00 ] 127.0.0.1 /index.php/home/index/dns
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: accessKeyId G:\www\tp\Application\Lib\DnsAliyun.class.php 第 23 行.
+NOTIC: [8] Undefined index: accessKeySecret G:\www\tp\Application\Lib\DnsAliyun.class.php 第 24 行.
+ERR: Class 'AlibabaCloud\Client\AlibabaCloud' not found
+
+[ 2019-07-17T15:11:30+08:00 ] 127.0.0.1 /index.php/home/index/dns
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: accessKeyId G:\www\tp\Application\Lib\DnsAliyun.class.php 第 23 行.
+NOTIC: [8] Undefined index: accessKeySecret G:\www\tp\Application\Lib\DnsAliyun.class.php 第 24 行.
+ERR: Class 'AlibabaCloud\Client\AlibabaCloud' not found
+
+[ 2019-07-17T15:11:38+08:00 ] 127.0.0.1 /index.php/home/index/dns
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: accessKeyId G:\www\tp\Application\Lib\DnsAliyun.class.php 第 23 行.
+NOTIC: [8] Undefined index: accessKeySecret G:\www\tp\Application\Lib\DnsAliyun.class.php 第 24 行.
+ERR: Class 'AlibabaCloud' not found
+
+[ 2019-07-17T15:11:39+08:00 ] 127.0.0.1 /index.php/home/index/dns
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: accessKeyId G:\www\tp\Application\Lib\DnsAliyun.class.php 第 23 行.
+NOTIC: [8] Undefined index: accessKeySecret G:\www\tp\Application\Lib\DnsAliyun.class.php 第 24 行.
+ERR: Class 'AlibabaCloud' not found
+
+[ 2019-07-17T15:11:47+08:00 ] 127.0.0.1 /index.php/home/index/dns
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: accessKeyId G:\www\tp\Application\Lib\DnsAliyun.class.php 第 23 行.
+NOTIC: [8] Undefined index: accessKeySecret G:\www\tp\Application\Lib\DnsAliyun.class.php 第 24 行.
+ERR: Class 'AlibabaCloud\Client\AlibabaCloud' not found
+
+[ 2019-07-17T15:12:54+08:00 ] 127.0.0.1 /index.php/home/index/dns
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: accessKeyId G:\www\tp\Application\Lib\DnsAliyun.class.php 第 23 行.
+NOTIC: [8] Undefined index: accessKeySecret G:\www\tp\Application\Lib\DnsAliyun.class.php 第 24 行.
+ERR: Class 'AlibabaCloud\Client\AlibabaCloud' not found
+
